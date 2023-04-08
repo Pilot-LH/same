@@ -32,6 +32,7 @@
 ```
 ffmpeg -framerate 6 -i output/%05d.png -filter_complex "[0:v]palettegen=reserve_transparent=off:stats_mode=single [palette]; [0:v][palette]paletteuse" vos_demo.gif
 ```
+- [ ] Improve the system's robustness
 
 ## References <a name="references"></a>
 - Segment Anything: [[`Paper`](https://ai.facebook.com/research/publications/segment-anything/)] [[`Project`](https://segment-anything.com/)]
