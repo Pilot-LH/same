@@ -16,8 +16,9 @@
 ## Video Object Segmentation <a name="vos"></a>
 
 <p align="center">
-  <img src="demo.gif" width="480" />
+  <img src="vos_demo.gif" width="640" />
 </p>
+
 
 1. Data in `demo/` folder is from [DAVIS](https://data.vision.ee.ethz.ch/csergi/share/davis/DAVIS-2017-test-dev-Full-Resolution.zip). In general, the data should be in the following format:
     ```
@@ -35,7 +36,7 @@
         ...
     ```
 2. Jupyter notebook `vos_exp.ipynb` shows an example of using SAM for one-shot video object segmentation
-3. Generate `demo.gif` by applying the same method in `vos_exp.ipynb` to multiple frames
+3. Generate `vos_demo.gif` by applying the same method in `vos_exp.ipynb` to multiple frames
 
 ## References <a name="references"></a>
 - Segment Anything: [[`Paper`](https://ai.facebook.com/research/publications/segment-anything/)] [[`Project`](https://segment-anything.com/)]
