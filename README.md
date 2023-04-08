@@ -19,24 +19,19 @@
   <img src="vos_demo.gif" width="640" />
 </p>
 
-
-1. Data in `demo/` folder is from [DAVIS](https://data.vision.ee.ethz.ch/csergi/share/davis/DAVIS-2017-test-dev-Full-Resolution.zip). In general, the data should be in the following format:
+1. Input data in `demo/` folder is from [DAVIS](https://davischallenge.org/), organized in the following structure:
     ```
     demo/
-        video1/
-            00000.png # initial masks
-            00000.jpg # inital rgb frame
-            00001.jpg
-            ...
-        video2/
-            00000.png # initial masks
-            00000.jpg # inital rgb frame
-            00001.jpg
-            ...
+        00000.png # initial masks
+        00000.jpg # inital rgb frame
+        00001.jpg
         ...
     ```
-2. Notebook `vos_exp.ipynb` shows an example of using SAM for one-shot video object segmentation
-3. Generate `vos_demo.gif` by applying the same method in `vos_exp.ipynb` to multiple frames
+2. Notebook `vos_exp.ipynb` shows an example of using SAM for one-shot VOS
+3. Apply the method above to multiple frames, then generate `vos_demo.gif` from output
+```
+ffmpeg -framerate 6 -i output/%05d.png -filter_complex "[0:v]palettegen=reserve_transparent=off:stats_mode=single [palette]; [0:v][palette]paletteuse" vos_demo.gif
+```
 
 ## References <a name="references"></a>
 - Segment Anything: [[`Paper`](https://ai.facebook.com/research/publications/segment-anything/)] [[`Project`](https://segment-anything.com/)]
