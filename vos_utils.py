@@ -49,6 +49,31 @@ def show_points(coords, labels, ax, marker_size=100):
     ax.scatter(neg_points[:, 0], neg_points[:, 1], 
                color='red', marker='*', s=marker_size, edgecolor='white', linewidth=1.25) 
 
+# import matplotlib.colors as mcolors
+
+# def show_masks(mask, ax, color):
+#     color = np.concatenate([mcolors.to_rgb(color), np.array([0.5])], axis=0)
+#     h, w = mask.shape[-2:]
+#     mask_image = mask.reshape(h, w, 1) * color.reshape(1, 1, -1)
+#     ax.imshow(mask_image)
+
+# def plot_pairs(img, pts_0, pts_1, masks, idx, out_dir='demo_output', save=False):
+#     # fig, [ax1, ax2] = plt.subplots(nrows=1, ncols=2, figsize=(20, 10))
+#     fig, ax1 = plt.subplots(figsize=(10, 10))
+#     ax1.imshow(img)
+#     ax1.scatter([p[0] for p in pts_0], [p[1] for p in pts_0], s=100, 
+#                 c='cyan', marker='*', edgecolor='white', linewidth=1)
+#     ax1.scatter([p[0] for p in pts_1], [p[1] for p in pts_1], s=100, 
+#                 c='orange', marker='*', edgecolor='white', linewidth=1)
+#     ax1.axis('off')
+#     show_masks(masks[0].cpu().numpy(), ax1, color='cyan')
+#     show_masks(masks[1].cpu().numpy(), ax1, color='orange')
+#     # ax2.axis('off')
+#     fig.subplots_adjust(hspace=0)
+#     fig.subplots_adjust(wspace=0)
+#     if save:
+#         plt.savefig(f'{out_dir}/{idx:05d}.png', dpi=100, bbox_inches='tight')
+#     plt.show()
     
 def local_correlation_softmax(feature0, feature1, local_radius, temperature, padding_mode='zeros'):
     b, c, h, w = feature0.size()
