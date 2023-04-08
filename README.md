@@ -35,7 +35,7 @@
             ...
         ...
     ```
-2. Jupyter notebook `vos_exp.ipynb` shows an example of using SAM for one-shot video object segmentation
+2. Notebook `vos_exp.ipynb` shows an example of using SAM for one-shot video object segmentation
 3. Generate `vos_demo.gif` by applying the same method in `vos_exp.ipynb` to multiple frames
 
 ## References <a name="references"></a>
