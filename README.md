@@ -1,4 +1,4 @@
-# Segment Anything Model Exploration
+# Segment Anything Model Exploration (WIP)
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@
 ## Video Object Segmentation <a name="vos"></a>
 
 <p align="center">
-  <img src="vos_demo.gif" width="640" />
+  <img src="high.gif" width="640" />
 </p>
 
 1. Input data in `demo/` folder is from [DAVIS](https://davischallenge.org/), organized in the following structure:
